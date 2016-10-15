@@ -14,6 +14,9 @@
         1. babel ES6 지원하지 않을때를 대비해서 집어넣었음.
         2. webpack 모듈 번들러로 사용을 함. js 관리차원에서 사용함.
         3. webpack-dev-server – wepback에서 지원하는 간단한 개발서버임 테스트할때 편함.
+        4. bundle.js는 다른 웹서버 같은경우 webpack으로 먼저 빌드해야함.
+        5. webpack-dev-server 가 실행될때 자동으로 빌드되서 메모리에 저장되고
+        6. /bundle.js 에 요청을 주었을때 public 안에 있는 파일이 아닌 메모리에 있는 파일을 반환.
 
 
 
