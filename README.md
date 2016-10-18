@@ -25,4 +25,16 @@
         4. 컴파일링 되면서 최적화 되서 빠름. 리엑트쓰는이유. 빠르니까
         5. 솔직히 JSX안쓸꺼면 리엑트의미없음.
         6. html, jsx의 중요한 차이점을 보려면 JSX gotchas 참조해보기 바람.
+
+### 2.2 설명
+        1. import 는 ES6 에 도입된 새로운 문법인데, var React = require(‘react’) 와 같음.
+        2. 참고로 var React = require(‘react’)는 commonjs문법임 차후에 기회되면 서술해야지
+        3. React 모듈은 Component를 만들때 사용됌. react에서 어찌보면 가장 중요한 거.
+        4. class 개념 역시 ES6 에 새로 도입된 요소중 하나인데
+        5. ES5 에서 클래스를 만들때는 메소드들을 nest 할 수 없고 prototype을 사용했어야 했는데 많이편해졌음.
+        6. render() 메소드에서는 컴포넌트에 렌더링 될 데이타를 정의함
+        7. return 안에 있는게 가장 중요한 부분임. React JSX 는 XML-like Syntax를
+           native Javascript로 변환함.
+        8. 컴포넌트에서 여러 Element 를 렌더링 해야 할 때, 그 element들을 필수적으로
+           container element 안에 포함시켜줘야 함.div element 를 wrapper 로 사용
 ****
