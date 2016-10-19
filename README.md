@@ -34,7 +34,16 @@
         5. ES5 에서 클래스를 만들때는 메소드들을 nest 할 수 없고 prototype을 사용했어야 했는데 많이편해졌음.
         6. render() 메소드에서는 컴포넌트에 렌더링 될 데이타를 정의함
         7. return 안에 있는게 가장 중요한 부분임. React JSX 는 XML-like Syntax를
-           native Javascript로 변환함.
+           native Javascript로 변환함. 즉 JSX는 EcmaScript로 치환되는 간단한 치환/확장 언어
         8. 컴포넌트에서 여러 Element 를 렌더링 해야 할 때, 그 element들을 필수적으로
            container element 안에 포함시켜줘야 함.div element 를 wrapper 로 사용
+        9. JSX 안에서, JavaScript 표현을 사용하는 방법은 간단함. 그냥 { } 로 wrapping 하면 됌.
+        10. let은 var랑 비슷함 var 변수의 scope는 기본적으로 함수 단위인데 let 은 블럭 범위 내에서 변수를 선언
+
+## 3. Component
+### 3.1. Component?
+        1. react에서 왜 컴포넌트 단위로 나눠놨는지에대해 생각해봐야함.
+        2. react 자체가 view컨트롤 라이브러리임 컴포넌트 단위로 재사용성이 높아지는 의미가 있음.
+      
+
 ****
