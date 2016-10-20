@@ -16,8 +16,10 @@ class App extends React.Component {
 
           return  (
               <div>
-                  <Header/>
-                  <Content/>
+                  <Header title={ this.props.headerTitle }/>
+                  <Content title={ this.props.contentTitle }
+                            body={ this.props.contentBody }/>
+
                   <h1> Hello Velopert </h1>
                   <h2> 지금상태는 {text}</h2>
                   <button onClick= {this.sayHey}>Click Me</button>
