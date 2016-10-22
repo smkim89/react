@@ -1,5 +1,5 @@
-# react study 한번 해볼까함
-나름 구색에 맞춰 정리하고있음 설명도 짱짱 잘쓰고있는듯ㅎㅎ
+# react study
+It’s what the cool kids use nowadays man, you know, 2016? Functional programming? High order functions? Currying? Pure functions?
 =============================
 ## 1. 과정
 ### 1.1. 뻘짓하는 과정
