@@ -4,10 +4,11 @@ import App from './components/App';
 
 const rootElement = document.getElementById('root');
 
+//props
 App.defaultProps = {
     headerTitle: '헤더',
-    contentTitle: '내용 타이틀',
-    contentBody: '내용 바디'
+    contentTitle: 3,
+    contentBody: undefined
 };
 
 ReactDOM.render(<App />, rootElement);

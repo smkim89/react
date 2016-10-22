@@ -11,5 +11,10 @@ class Content extends React.Component {
         );
     }
 }
+//propType validate default String isRequired는 필수값을 말함.
+Content.propTypes = {
+    title: React.PropTypes.string,
+    body: React.PropTypes.string.isRequired
+};
 
 export default Content;
