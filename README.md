@@ -68,5 +68,9 @@ It’s what the cool kids use nowadays man, you know, Functional programming? Hi
         3. state를 사용하는 컴포넌트의 갯수를 최소화 하는 것이 중요함
         4. 10 개의 컴포넌트에서 유동적인 데이터를 사용 하게 될 땐, 각 데이터에 state를 사용 할 게 아니라,
          props 를 사용하고 10 개의 컴포넌트를 포함시키는 container 컴포넌트를 사용하는것이 효율적
+        5. RandomNumber의 경우 첫 constructor에서 ramdom한 value값을 세팅한다.
+        그리고 버튼을 클릭(컴포넌트) -> props(부모)의 onUpdate를 실행하여 데이터를 리로드 한다.
+        6. State 클래스는 React.Component 클래스를 상속함. super 함수는, 상속받은 부모패런트의 생성자 메소드를 실행시켜줌.
+        React 컴포넌트가 생성될때, 생성자의 인수로는 props 가 있기 때문에, 그대로 전달해주어서 React 컴포넌트의 생성자를 먼저 실행하고 정의한 클래스의 생성자를 실행하는것
 
 ****
