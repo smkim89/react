@@ -7,8 +7,8 @@ const rootElement = document.getElementById('root');
 //props
 App.defaultProps = {
     headerTitle: '헤더',
-    contentTitle: 3,
-    contentBody: undefined
+    contentTitle: 'Title',
+    contentBody: 'BodyContent'
 };
 
 ReactDOM.render(<App />, rootElement);

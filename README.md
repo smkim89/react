@@ -1,5 +1,5 @@
 # react study
-It’s what the cool kids use nowadays man, you know, 2016? Functional programming? High order functions? Currying? Pure functions?
+It’s what the cool kids use nowadays man, you know, Functional programming? High order functions? Currying? Pure functions?
 =============================
 ## 1. 과정
 ### 1.1. 뻘짓하는 과정
@@ -63,6 +63,10 @@ It’s what the cool kids use nowadays man, you know, 2016? Functional programmi
 
 ### 3.3 state
         1. 컴포넌트에서 유동적인 데이터를 다룰 때, state 를 사용함.
-        2. Prop은 외부에서 전달하는 값이지 그 컴포넌트가 자체적으로 관리하는 값이 아니므로 내부에서 변경하면 안 됨. 컴포넌트가 관리할 필요가 있는 값은 State로 정의.
+        2. Prop은 외부에서 전달하는 값이지 그 컴포넌트가 자체적으로 관리하는 값이 아니므로 내부에서 변경하면 안 됨.
+        컴포넌트가 관리할 필요가 있는 값은 State로 정의.
+        3. state를 사용하는 컴포넌트의 갯수를 최소화 하는 것이 중요함
+        4. 10 개의 컴포넌트에서 유동적인 데이터를 사용 하게 될 땐, 각 데이터에 state를 사용 할 게 아니라,
+         props 를 사용하고 10 개의 컴포넌트를 포함시키는 container 컴포넌트를 사용하는것이 효율적
 
 ****
