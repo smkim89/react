@@ -75,12 +75,14 @@ It’s what the cool kids use nowadays man, you know, Functional programming? Hi
         그대로 전달해주어서 React 컴포넌트의 생성자를 먼저 실행하고 정의한 클래스의 생성자를 실행하는것
 
 ## 4. Array
-### 4.1 MAp
+### 4.1 MAP
         1. arr 내장객체 map이 있음.
         2. 배열 내의 각 요소를 프로세싱 하여 그 결과로 새로운 배열을 생성
         3. arr.map(callback, [thisArg]) callback에는 다음 3가지 인수를 가질 수 있음
         4. currentValue 현재 처리되고 있는 요소
         5. index 현재 처리되고 있는 요소의 index 값
         6. array 메소드가 불려진 배열
+        7. ES6 arrow function : let result = numbers.map((num) => {return num});
+        8. [모질라](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions "모질라"). 참고
 
 ****

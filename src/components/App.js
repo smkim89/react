@@ -3,11 +3,18 @@ import Header from './Header';
 import Content from './Content';
 import State from './State';
 import RandomNumber from './RandomNumber';
+import Contacts from './Contacts';
 
 class App extends React.Component {
     sayHey(){
        alert("배고프고 배고프다 아아 배고파");
     }
+
+    sayArray(){
+      let numbers = [1, 2, 3, 4, 5];
+      alert(numbers.map((num) => {return num*num}));
+    }
+
 
     /*
     기본적으로 핸들러로 호출되는 람다함수(익명함수)들의 this는 전역객체(window)이기 때문에
@@ -56,9 +63,10 @@ class App extends React.Component {
                   <Content title={ this.props.contentTitle }
                             body={ this.props.contentBody }/>
                   <State />
+                  <Contacts/>
                   <h1> Hello Velopert </h1>
                   <h2> 지금상태는 {text}</h2>
-                  <button onClick= {this.sayHey}>Click Me</button>
+                  <button onClick= {this.sayArray}>Click Me</button>
                   <p style = {pStyle}>{1 == 1 ? 'True' : 'False'}</p>
                   <RandomNumber number={this.state.value}
                                   onUpdate={this._updateValue} />
