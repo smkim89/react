@@ -54,14 +54,14 @@ It’s what the cool kids use nowadays man, you know, Functional programming? Hi
 ### 3.1. Component?
         1. react에서 왜 컴포넌트 단위로 나눠놨는지에대해 생각해봐야함.
         2. react 자체가 view컨트롤 라이브러리임 컴포넌트 단위로 재사용성이 높아지는 의미가 있음.
-### 3.2 Props
+### 3.2. Props
         1. 컴포넌트에서 사용 할 데이터 중 변동되지 않는 데이터를 다룰 때 사용
         2. parent 컴포넌트에서 child 컴포넌트로 데이터를 전할 때 사용한다.
         3. 컴포넌트에서 immutable (변하지 않는)  데이터가 필요 할 땐, render() 메소드의 내부에 안에 { this.props.propsName } 형식으로 넣고,컴포넌트를 사용 할 때, < > 괄호 안에 propsName="value" 를 넣어 값을 설정
         4. Type Validate 컴포넌트 에서 원하는 props 의 Type 과 전달 된 props 의 Type 이 일치하지 않을 때 콘솔에서 오류 메시지를 나타낼수 있음.
         5. Prop은 외부로부터 값을 지정받기 때문에 validation이 필요.
 
-### 3.3 state
+### 3.3. state
         1. 컴포넌트에서 유동적인 데이터를 다룰 때, state 를 사용함.
         2. Prop은 외부에서 전달하는 값이지 그 컴포넌트가 자체적으로 관리하는 값이 아니므로 내부에서 변경하면 안 됨.
         컴포넌트가 관리할 필요가 있는 값은 State로 정의.
@@ -75,7 +75,7 @@ It’s what the cool kids use nowadays man, you know, Functional programming? Hi
         그대로 전달해주어서 React 컴포넌트의 생성자를 먼저 실행하고 정의한 클래스의 생성자를 실행하는것
 
 ## 4. Array
-### 4.1 MAP
+### 4.1. MAP
         1. arr 내장객체 map이 있음.
         2. 배열 내의 각 요소를 프로세싱 하여 그 결과로 새로운 배열을 생성
         3. arr.map(callback, [thisArg]) callback에는 다음 3가지 인수를 가질 수 있음
@@ -83,6 +83,6 @@ It’s what the cool kids use nowadays man, you know, Functional programming? Hi
         5. index 현재 처리되고 있는 요소의 index 값
         6. array 메소드가 불려진 배열
         7. ES6 arrow function : let result = numbers.map((num) => {return num});
-        8. ['모질라'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions/){: target="_blank" } 
+        8. ['모질라'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions/)
 
 ****
