@@ -83,6 +83,6 @@ It’s what the cool kids use nowadays man, you know, Functional programming? Hi
         5. index 현재 처리되고 있는 요소의 index 값
         6. array 메소드가 불려진 배열
         7. ES6 arrow function : let result = numbers.map((num) => {return num});
-        8. 자세한건 모질라 참조.
+        8. 자세한건 모질라 참조. 이거에 대해선 추후 블로그에 정리해서 올림
 
 ****
