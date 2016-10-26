@@ -85,4 +85,9 @@ It’s what the cool kids use nowadays man, you know, Functional programming? Hi
         7. ES6 arrow function : let result = numbers.map((num) => {return num});
         8. 자세한건 모질라 참조. 이거에 대해선 추후 블로그에 정리해서 올림
 
+###  4.2 state 안의 array CRUD
+        1. concat() 메서드는 인자로 주어진 배열이나 값들을 기존 배열에 합쳐서 새 배열을 반환
+        2. 위의 방법은 배열크기가 커지면 성능저하가 생김.
+        3. Immutability Helpers 를 사용하는 방법이 있음
+
 ****
