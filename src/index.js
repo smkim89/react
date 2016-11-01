@@ -4,6 +4,7 @@ import App from './components/App';
 
 const rootElement = document.getElementById('root');
 
+
 //props
 App.defaultProps = {
     headerTitle: '헤더',
