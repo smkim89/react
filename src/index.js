@@ -4,7 +4,7 @@ import App from './components/App';
 
 const rootElement = document.getElementById('root');
 
-//props 왜안돼?
+//props
 App.defaultProps = {
     headerTitle: '헤더',
     contentTitle: 'Title',
