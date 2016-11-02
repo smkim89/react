@@ -89,6 +89,7 @@ It’s what the cool kids use nowadays man, you know, Functional programming? Hi
         1. concat() 메서드는 인자로 주어진 배열이나 값들을 기존 배열에 합쳐서 새 배열을 반환
         2. 위의 방법은 배열크기가 커지면 성능저하가 생김.
         3. Immutability Helpers 를 사용하는 방법이 있음
-        
+        4. 배열을 더 효율적으로 수정 할 수 있게 해주는 페이스북의 Immutable-js  를 사용
+        5. 설치방법 : npm install --save react-addons-update
 
 ****
