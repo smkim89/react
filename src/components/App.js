@@ -4,6 +4,7 @@ import Content from './Content';
 import State from './State';
 import RandomNumber from './RandomNumber';
 import Contacts from './Contacts';
+import ContactCreator from './ContactCreator';
 
 class App extends React.Component {
     sayHey(){
@@ -63,13 +64,14 @@ class App extends React.Component {
                   <Content title={ this.props.contentTitle }
                             body={ this.props.contentBody }/>
                   <State />
-                  <Contacts/>
                   <h1> Hello Velopert </h1>
                   <h2> 지금상태는 {text}</h2>
                   <button onClick= {this.sayArray}>Click Me</button>
                   <p style = {pStyle}>{1 == 1 ? 'True' : 'False'}</p>
                   <RandomNumber number={this.state.value}
                                   onUpdate={this._updateValue} />
+
+                  <Contacts/>
               </div>
           );
       }
