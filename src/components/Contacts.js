@@ -15,6 +15,22 @@ class Contacts extends React.Component {
         };
     }
 
+/*
+
+update() 메소드의 첫 파라미터는 처리 할 배열이며 두번째는 처리 할 명령들을 지니고 있는 객체 타입입니다.
+
+$push: [newObj, newObj2]는 list 배열에 newObj 와 newObj2 를 추가해줍니다.
+한 객체를 추가 할 때도 [ ] 안에 배열형태로 감싸줘야합니다.
+
+Immutable-js 의 syntax 는 MongoDB 쿼리 언어에서 영감을 받았다고 합니다.
+
+브라우저상에서 react-with-addons를 불러와서 사용하는 경우에는 update 가 아닌 React.addons.update 를 사용해야합니다.
+
+*/
+
+
+// Immutability Helpers 를 사용하여 배열에 원소를 추가하였으며,
+// _insertContact(name, phone) 메소드를 ContactCreator 의 prop 으로 전달 .
     _insertContact(name, phone){
         let newState = update(this.state, {
             contactData: {
