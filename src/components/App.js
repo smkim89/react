@@ -33,6 +33,7 @@ class App extends React.Component {
 
     함수선언문이아닌 표현식함수(익명함수)에만 바인딩할수 있다.
     */
+    
 
     constructor(props){
           super(props);
