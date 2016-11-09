@@ -1,5 +1,6 @@
 import React from 'react';
 import ContactCreator from './ContactCreator';
+import ContactRemover from './ContactRemover';
 import update from 'react-addons-update';
 
 class Contacts extends React.Component {
@@ -13,6 +14,23 @@ class Contacts extends React.Component {
                 {name: "David", phone: "010-0000-0004"}
             ]
         };
+    }
+
+    _removeContact(){
+        if(this.state.selectedKey==-1){
+            console.log("contact not selected");
+            return;
+        }
+
+        this.setState({
+            contactData: update(
+                this.state.contactData,
+                {
+                    $splice: [[this.state.selectedKey, 1]]
+                }
+            ),
+            selectedKey: -1
+        });
     }
 
 /*
@@ -52,6 +70,7 @@ Immutable-js 의 syntax 는 MongoDB 쿼리 언어에서 영감을 받았다고 �
                     })}
                 </ul>
                 <ContactCreator onInsert={this._insertContact.bind(this)}/>
+                <ContactRemover onRemove={this._removeContact.bind(this)}/>
             </div>
         );
     }
