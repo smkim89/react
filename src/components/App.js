@@ -18,6 +18,7 @@ class App extends React.Component {
 
 
     /*
+    
     기본적으로 핸들러로 호출되는 람다함수(익명함수)들의 this는 전역객체(window)이기 때문에
     타이머라든지 이밴트 핸들러의 콜백함수로 호출이될때도 특정 객체와 연결하여 this를 유지 하고싶을때 bind 함수로 해결할수 있다.
 
@@ -32,8 +33,9 @@ class App extends React.Component {
     ECMAScript 5에서 추가되었다.
 
     함수선언문이아닌 표현식함수(익명함수)에만 바인딩할수 있다.
+
     */
-    
+
 
     constructor(props){
           super(props);
