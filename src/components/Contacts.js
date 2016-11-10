@@ -1,6 +1,7 @@
 import React from 'react';
 import ContactCreator from './ContactCreator';
 import ContactRemover from './ContactRemover';
+import ContactEditor from './ContactEditor';
 import update from 'react-addons-update';
 
 class Contacts extends React.Component {
@@ -12,10 +13,21 @@ class Contacts extends React.Component {
                 {name: "Betty", phone: "010-0000-0002"},
                 {name: "Charlie", phone: "010-0000-0003"},
                 {name: "David", phone: "010-0000-0004"}
-            ]
+            ],
+            selectedKey: -1,
+            selected: {
+                name: "",
+                phone: ""
+            }
         };
     }
 
+    // 새로운 state 를 사용 할 땐, 언제나 초기 값을 설정해줘야합니다. (그렇지 않으면 오류가 발생하기 쉽상입니다.)
+    //
+    // Contact를 선택하였을 때 prop selected 에 값을 저장 하게하고,
+    // 선택을 취소 하였을 때, 값을 공백으로 설정하도록 하였습니다.
+    //
+    // 그리고 이 prop selected 값을 ContactEditor 에 prop contact로 전달해 준다
     _removeContact(){
         if(this.state.selectedKey==-1){
             console.log("contact not selected");
@@ -58,6 +70,44 @@ Immutable-js 의 syntax 는 MongoDB 쿼리 언어에서 영감을 받았다고 �
         this.setState(newState);
     }
 
+    _editContact(name, phone){
+       this.setState({
+           contactData: update(
+               this.state.contactData,
+               {
+                   [this.state.selectedKey]: {
+                       name: { $set: name },
+                       phone: { $set: phone }
+                   }
+               }
+           ),
+           selected: {
+               name: name,
+               phone: phone
+           }
+       });
+   }
+
+    _onSelect(key){
+        if(key==this.state.selectedKey){
+            console.log("key select cancelled");
+            this.setState({
+                selectedKey: -1,
+                selected: {
+                    name: "",
+                    phone: ""
+                }
+            });
+            return;
+        }
+
+        this.setState({
+            selectedKey: key,
+            selected: this.state.contactData[key]
+        });
+        console.log(key + " is selected");
+    }
+
     render(){
         return(
             <div>
@@ -71,6 +121,8 @@ Immutable-js 의 syntax 는 MongoDB 쿼리 언어에서 영감을 받았다고 �
                 </ul>
                 <ContactCreator onInsert={this._insertContact.bind(this)}/>
                 <ContactRemover onRemove={this._removeContact.bind(this)}/>
+                <ContactEditor onEdit={this._editContact.bind(this)}
+                          isSelected={(this.state.selectedKey !=-1)}/>
             </div>
         );
     }
