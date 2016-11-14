@@ -108,6 +108,14 @@ Immutable-js 의 syntax 는 MongoDB 쿼리 언어에서 영감을 받았다고 �
         console.log(key + " is selected");
     }
 
+    _isSelected(key){
+        if(this.state.selectedKey == key){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     render(){
         return(
             <div>
@@ -116,13 +124,17 @@ Immutable-js 의 syntax 는 MongoDB 쿼리 언어에서 영감을 받았다고 �
                     {this.state.contactData.map((contact, i) => {
                         return (<ContactInfo name={contact.name}
                                             phone={contact.phone}
-                                              key={i}/>);
+                                              key={i}
+                                       contactKey={i}
+                                       isSelected={this._isSelected.bind(this)(i)}
+                                         onSelect={this._onSelect.bind(this)}/>);
                     })}
                 </ul>
                 <ContactCreator onInsert={this._insertContact.bind(this)}/>
                 <ContactRemover onRemove={this._removeContact.bind(this)}/>
                 <ContactEditor onEdit={this._editContact.bind(this)}
-                          isSelected={(this.state.selectedKey !=-1)}/>
+                           isSelected={(this.state.selectedKey !=-1)}
+                              contact={this.state.selected}/>
             </div>
         );
     }
