@@ -9,7 +9,7 @@ class ContactEditor extends React.Component {
         };
     }
 
-    // 제  ContactEditor 에서 선택된 Contact의 값을 받아와서 렌더링해줘야겠죠?
+    // 제 ContactEditor 에서 선택된 Contact의 값을 받아와서 렌더링해줘야겠죠?
     //
     // 하지만, 인풋박스의 value 부분은 유동적이기에 그 부분에 { this.props.contact.name } 을 할 수는 없습니다.
     //
